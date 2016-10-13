@@ -1,0 +1,59 @@
+/**
+ * (Overall Project Name)
+ * Class: (Class name)
+ * Description: (Type description here)
+ * Notes: (place information about the super classes, subclasses, interfaces, 
+ *      sources used and possibly other important things to say)
+ * @author(s) Zachary Kirchens (Or, place your name here. I included mine as I 
+        originally made this sample outline)
+ */
+
+
+//Variables---------------------------------------------------------------------
+//Public:
+
+//Private:
+
+
+//Constructors------------------------------------------------------------------
+/*Default Constructor: This Constructor sets a few default values for the _ variables. 
+This is done by _: 
+variable "" is set to _*/
+
+/*Advanced Constructor: This Constructor takes _ arguments to set the values for the _ variables.
+This is done by _: 
+variable "" is set to argument "", which is of type _*/
+
+
+The "This is done by _" statement can be filled out in various ways. 
+If variable name=value; then it's "direct variable setting"
+If this.setVariable(value); then it's "calling the mutator methods"
+finally, if it is a different method than the above, explain in the space.
+if the variables are not all set the same way, copy and paste the "this is done 
+by" line and fill out that value (although in all honesty you are probably
+going to use only one method because that just makes sense)
+
+also, if there is any superclass calling, be sure to mention that, something 
+along the lines of "the constructor from the superclass _ is called to set
+the variables inherited from said superclass (See class _)"
+
+INCLUDE ALL FORMULAS AND SOURCES
+
+
+//Mutators----------------------------------------------------------------------
+/*The "" Method: This method takes a _ argument, "", which is then applied to the "" variable*/
+
+Modify the above slightly for variations, such as methods that take more than 
+one argument, do more than simply "variableName=ArgumentName" or if they are 
+overridden from an interface/ super class. INCLUDE ALL FORMULAS AND SOURCES
+
+
+//Accessors---------------------------------------------------------------------
+/*The "" Method: This method returns the value of the "" variable, which is of type _*/
+
+As stated in the mutators section, modify the above template if the method does
+more than "return variableName" or if this method is overridden from an 
+interface/ superclass. INCLUDE ALL FORMULAS AND SOURCES
+
+
+
