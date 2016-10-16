@@ -3,133 +3,130 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package electronicsstore;
 
 /**
- *
- * @author Zachary Kirchens
+ * Electronic Store
+ * Class: Store Object
+ * This class will set the descriptions of the objects
+ * in the electronic store inventory.
+ * To be implemented with class Inventory and the
+ * membership classes.
+ * @author Abraham Galaviz
  */
-public class StoreObject 
-{
-    //Variables-----------------------------------------------------------------
-    String name;
-    String description;
-    int itemNumber;
-    double price;
-    int quantityOnHand;
-    int quantityOnOrder;
-    //Constructors--------------------------------------------------------------
+public class StoreObject {
+    
+    //variables
+    private String name;
+    private String description;
+    private Integer itemNumber;
+    private Double price;
+    private Integer quantity;
+    
+    /*Default Constructor: This constructor sets a few default values for the 5 variables. 
+        This is done by calling the mutator methods: 
+        variable "name" is set to "name",(?)
+        variable "description" is set to "description",(?)
+        variable "itemNumber" is set to "itemNumber",(?)
+        variable "price" is set to "price",(?)
+        variable "quantity" is set to "quantity".(?)
+    */
     public StoreObject()
-    {/*Default Constructor: This Constructor sets a few default values for the 
-        6 variables. 
-        This is done by calling the mutator methods: 
-        variable "name" is set to "Default", using the "setName" method
-        variable "description" is set to "Not a real object. Please Remove.", 
-            using the "setDescription" method
-        variable "itemNumber" is set to -1, using the "setItemNumber" method
-        variable "price" is set to 0.00, using the "setPrice" method
-        variable "quantityOnHand" is set to 0, using the "setQuantityOnHand" 
-            method
-        variable "quantityOnOrder" is set to 0, using the "setQuantityOnOrder" 
-            method*/
-        this.setName("Default");
-        this.setDescription("Not a real object. Please Remove.");
-        this.setItemNumber(-1);
-        this.setPrice(0.00);
-        this.setQuantityOnHand(0);
-        this.setQuantityOnOrder(0);
+    {
+        this.setName(name);
+        this.setDescription(description);
+        this.setItemNumber(itemNumber);
+        this.setPrice(price);
+        this.setQuantity(quantity);
+        /*"Overridable method in constructor" Not quite sure what to fix here.*/
+        
     }
-    public StoreObject(String sName, String sDescription, int iItemNumber,
-            double dPrice, int iQuantityOnHand, int iQuantityOnOrder)
-    {/*Advanced Constructor: This Constructor takes 6 arguments to set the 
-        values for the 6 variables.
+    /*Advanced Constructor: This constructor takes 5 arguments to set the 
+        values for the 5 variables.  
         This is done by calling the mutator methods: 
-        variable "name" is set to argument "sName", which is of type String 
-            using the "setName" method
-        variable "description" is set to argument "sDescription", which is of 
-            type String using the "setDescription" method
-        variable "itemNumber" is set to argument "iItemNumber", which is of 
-            type int using the "setItemNumber" method
-        variable "price" is set to argument "dPrice", which is of type double 
-            using the "setPrice" method
-        variable "quantityOnHand" is set to argument "iQuantityOnHand", which 
-            is of type int using the "setQuantityOnHand" method
-        variable "quantityOnOrder" is set to argument "iQuantityOnOrder", which 
-            is of type int using the "setQuantityOnOrder" method*/
+        variable "name" is set to argument "sName", which is of type String,
+        variable "description" is set to argument "sDescription", which is of type String,
+        variable "itemNumber" is set to argument "iItemNumber", which is of type Integer,
+        variable "price" is set to argument "dPrice", which is of type Double,
+        variable "quantity" is set to argument "iQuantity", which is of type Integer.
+    */
+    public StoreObject(String sName, String sDescription, Integer iItemNumber, Double dPrice, Integer iQuantity)
+    {
         this.setName(sName);
         this.setDescription(sDescription);
         this.setItemNumber(iItemNumber);
         this.setPrice(dPrice);
-        this.setQuantityOnHand(iQuantityOnHand);
-        this.setQuantityOnOrder(iQuantityOnOrder);
+        this.setQuantity(iQuantity);
+        /*"Overridable method in constructor" Same warning as before*/
     }
     
     
-    //Mutators------------------------------------------------------------------
-    public void setName(String sName)
-    {/*The "setName" Method: This method takes a String argument, "sName", 
-        which is then applied to the "name" variable*/
-        name=sName;
+    //mutators
+    //The "setName" Method: This method takes a String argument, "sName", 
+    //which is then applied to the "name" variable.
+    public void setName(String sName){
+        name = sName;
     }
-    public void setDescription(String sDescription)
-    {/*The "getDescription" Method: This method takes a String argument, 
-        "sDescription", which is then applied to the "description" variable*/
-        description=sDescription;
+    
+    //The "setDescription" Method: This method takes a String argument, "sDescription", 
+    //which is then applied to the "description" variable.
+    public void setDescription(String sDescription){
+        description = sDescription;
     }
-    public void setItemNumber(int iItemNumber)
-    {/*The "setItemNumber" Method: This method takes an int argument, 
-        "iItemNumber", which is then applied to the "itemNumber" variable*/
-        itemNumber=iItemNumber;
+    
+    //The "setItemNumber" Method: This method takes a String argument, "iItemNumber", 
+    //which is then applied to the "itemNumber" variable.
+    public void setItemNumber(Integer iItemNumber){
+        itemNumber = iItemNumber;
     }
-    public void setPrice(double dPrice)
-    {/*The "setPrice" Method: This method takes a double argument, "dPrice", 
-        which is then applied to the "price" variable*/
-        price=dPrice;
+    
+    //The "setPrice" Method: This method takes a String argument, "dPrice", 
+    //which is then applied to the "price" variable.
+    public void setPrice(Double dPrice){
+        price = dPrice;
     }
-    public void setQuantityOnHand(int iQuantityOnHand)
-    {/*The "setQuantityOnHand" Method: This method takes an int argument, 
-        "iQuantityOnHand", which is then applied to the "quantityOnHand" 
-        variable*/
-        quantityOnHand=iQuantityOnHand;
-    }
-    public void setQuantityOnOrder(int iQuantityOnOrder)
-    {/*The "setQuantityOnOrder" Method: This method takes an int argument, 
-        "iQuantityOnOrder", which is then applied to the "quantityOnOrder" 
-        variable*/
-        quantityOnOrder=iQuantityOnOrder;
+    
+    //The "setQuantity" Method: This method takes a String argument, "iQuantity", 
+    //which is then applied to the "quantity" variable.
+    public void setQuantity(Integer iQuantity){
+        quantity = iQuantity;
     }
     
     
-    //Accessors-----------------------------------------------------------------
+    
+    //accessors
+    //The "getName" Method: This method returns the value of the "name"
+    //variable, which is of type String.
     public String getName()
-    {/*The "getName" Method: This method returns the value of the "name" 
-        variable, which is of type String*/
+    {
         return name;
     }
+    
+    //The "getDescription" Method: This method returns the value of the "description"
+    //variable, which is of type String.
     public String getDescription()
-    {/*The "getDescription" Method: This method returns the value of the 
-        "description" variable, which is of type String*/
+    {
         return description;
     }
-    public int getItemNumber()
-    {/*The "getItemNumber" Method: This method returns the value of the 
-        "itemNumber" variable, which is of type int*/
+    
+    //The "getItemNumber" Method: This method returns the value of the "itemNumber"
+    //variable, which is of type Integer.
+    public Integer getItemNumber()
+    {
         return itemNumber;
     }
-    public double getPrice()
-    {/*The "getPrice" Method: This method returns the value of the "price" 
-        variable, which is of type double*/
+    
+    //The "getPrice" Method: This method returns the value of the "price"
+    //variable, which is of type Double.
+    public Double getPrice()
+    {
         return price;
     }
-    public int getQuantityOnHand()
-    {/*The "getQuantityOnHand" Method: This method returns the value of the 
-        "quantityOnHand" variable, which is of type int*/
-        return quantityOnHand;
-    }
-    public int getQuantityOnOrder()
-    {/*The "getQuantityOnOrder" Method: This method returns the value of the 
-        "quantityOnOrder" variable, which is of type int*/
-        return quantityOnOrder;
-    }
     
+    //The "getQuantity" Method: This method returns the value of the "quantity"
+    //variable, which is of type Integer.
+    public Integer getQuantity()
+    {
+        return quantity;
+    }
+
 }
