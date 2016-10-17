@@ -14,62 +14,62 @@ import java.util.ArrayList;
 public class Inventory 
 {
     //Variables-----------------------------------------------------------------
-    ArrayList<StoreObject> TV=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> CellPhone=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> Wearables=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> PC_Accessories=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> VideoGameConsoles=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> Cameras=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> Speakers=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> CarElectronics=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> MusicalInstruments=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> OfficeElectronics=new ArrayList<StoreObject>();
+    private String name;
+    private String description;
+    private ArrayList<StoreObject> inventoryList;
     
     
     //Constructors--------------------------------------------------------------
     public Inventory()
     {
-        
+        this.setName("Default");
+        this.setDescription("A temporary, default inventory list");
+        inventoryList=new ArrayList<StoreObject>();
+    }
+    public Inventory(String sName, String sDescription)
+    {
+        this.setName(sName);
+        this.setDescription(sDescription);
+        inventoryList=new ArrayList<StoreObject>();
     }
     
     
     //Mutators------------------------------------------------------------------
-    //TV:
-    public void addToTV(StoreObject item)
-    {/*The "addToCart" Method: This method takes a StoreObject argument, "item",
-        which is then added to the "TV" ArrayList object using said object's 
-        "remove" method*/
-        TV.add(item);
+    public void setName(String sName)
+    {
+        name=sName;
     }
-    public void removeFromTV(StoreObject item)
-    {/*The "removeFromCart" Method: This method takes a StoreObject argument, 
-        "item", which is then removed from the "TV" ArrayList object, using 
-        said object's "remove" method*/
-        TV.remove(item);
+    public void setDescription(String sDescription)
+    {
+        description=sDescription;
     }
-    //Cellphone:
-    public void addTo CellPhone (StoreObject item)
-    {/*The "addToCart" Method: This method takes a StoreObject argument, "item",
-        which is then added to the "CellPhone" ArrayList object using said 
-        object's "remove" method*/
-        CellPhone.add(item);
+    public void addToInventory(StoreObject item)
+    {/*The "addToInventory" Method: This method takes a StoreObject argument, 
+        "item", which is then added to the "inventoryList" ArrayList object 
+        using said object's "remove" method*/
+        inventoryList.add(item);
     }
-    public void removeFrom _(StoreObject item)
-    {/*The "removeFromCart" Method: This method takes a StoreObject argument, 
-        "item", which is then removed from the "" ArrayList object, using 
-        said object's "remove" method*/
-        _.remove(item);
+    public void removeFromInventory(StoreObject item)
+    {/*The "removeFromInventory" Method: This method takes a StoreObject 
+        argument, "item", which is then removed from the "inventoryList" 
+        ArrayList object, using said object's "remove" method*/
+        inventoryList.remove(item);
     }
-    ArrayList<StoreObject> CellPhone=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> Wearables=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> PC_Accessories=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> VideoGameConsoles=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> Cameras=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> Speakers=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> CarElectronics=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> MusicalInstruments=new ArrayList<StoreObject>();
-    ArrayList<StoreObject> OfficeElectronics=new ArrayList<StoreObject>();
     
     
     //Accessors-----------------------------------------------------------------
+    public String getName()
+    {
+        return name;
+    }
+    
+    public String getDescription()
+    {
+        return description;
+    }
+    public ArrayList<StoreObject> getList()
+    {
+        return inventoryList;
+    }
+    
 }
